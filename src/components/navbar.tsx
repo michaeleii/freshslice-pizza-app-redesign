@@ -8,7 +8,7 @@ export default function NavBar() {
         <li>
           <Link
             href="/"
-            className="flex flex-col items-center transition-colors hover:text-green-500"
+            className="flex flex-col items-center p-5 transition-colors hover:text-green-500"
           >
             <HomeIcon />
             <span>Home</span>
@@ -17,16 +17,16 @@ export default function NavBar() {
         <li>
           <Link
             href="/order"
-            className="flex flex-col items-center transition-colors hover:text-green-500"
+            className="flex flex-col items-center p-5 transition-colors hover:text-green-500"
           >
-            <PizzaIcon />
+            <PizzaIcon className="-scale-x-100" />
             <span>Order</span>
           </Link>
         </li>
         <li>
           <Link
             href="/rewards"
-            className="flex flex-col items-center transition-colors hover:text-green-500"
+            className="flex flex-col items-center p-5 transition-colors hover:text-green-500"
           >
             <CreditCardIcon />
             <span>Rewards</span>
@@ -35,7 +35,7 @@ export default function NavBar() {
         <li>
           <Link
             href="/account"
-            className="flex flex-col items-center transition-colors hover:text-green-500"
+            className="flex flex-col items-center p-5 transition-colors hover:text-green-500"
           >
             <User2Icon />
             <span>Account</span>
