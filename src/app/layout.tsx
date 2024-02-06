@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "antialiased relative h-dvh bg-lime-950"
+          "antialiased relative min-h-dvh bg-lime-950"
         )}
       >
         {children}
