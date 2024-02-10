@@ -44,19 +44,35 @@ function Coupon({
 }) {
   return (
     <div className="flex rounded-md border-2 border-l-[15px] border-green-700 p-5">
-      <div className="flex flex-1 flex-col gap-1">
-        <h3 className="mb-4 text-2xl font-medium text-green-700">{title}</h3>
-        <p className="text-sm text-gray-500">{description}</p>
+      <div className="flex flex-col justify-center gap-2">
+        <h3 className="mb-4 text-lg font-medium text-green-700">{title}</h3>
+        <p className="text-xs text-gray-500">{description}</p>
       </div>
-      <Image src={FreshSliceLogo} alt="Freshslice Pizza" width={100} />
+      <div className="my-auto">
+        <Image
+          src={FreshSliceLogo}
+          alt="Freshslice Pizza"
+          className="aspect-square"
+          width={100}
+          height={100}
+        />
+      </div>
     </div>
   );
 }
 
 function Order() {
   return (
-    <div className="flex w-full gap-10 rounded-lg border p-5 shadow">
-      <Image src={FreshSliceLogo} alt="FreshSlice" width={100} />
+    <div className="flex w-full gap-2 rounded-lg border p-5 shadow-md">
+      <div className="my-auto">
+        <Image
+          src={FreshSliceLogo}
+          alt="Freshslice Pizza"
+          className="aspect-square"
+          width={100}
+          height={100}
+        />
+      </div>
       <div className="flex-1">
         <h3 className="text-sm font-semibold text-gray-500">
           Freshslice Pizza (Joyce St)
@@ -64,12 +80,12 @@ function Order() {
         <Separator className="my-4" />
         <div className="flex items-center justify-around gap-4">
           <div className="flex flex-col items-center gap-1">
-            <h4 className="text-sm font-medium text-green-700">$0.00</h4>
-            <p className="text-sm text-gray-500">Active - In progress</p>
+            <h4 className="text-sm font-medium text-green-700">$8.92</h4>
+            <p className="text-xs text-gray-500">Completed</p>
           </div>
           <div className="flex flex-col items-center gap-1">
             <h4 className="text-sm font-medium text-green-700">Aug 29</h4>
-            <p className="text-sm text-gray-500">2023</p>
+            <p className="text-xs text-gray-500">2023</p>
           </div>
         </div>
       </div>
