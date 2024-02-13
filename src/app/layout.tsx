@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={cn(
           open_sans.className,
-          "relative flex min-h-dvh flex-col bg-lime-950 antialiased",
+          "relative flex min-h-dvh flex-col antialiased",
         )}
       >
         {children}

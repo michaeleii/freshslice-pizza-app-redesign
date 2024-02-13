@@ -19,8 +19,8 @@ const navLinks = [
 export default function NavBar() {
   const pathname = usePathname();
   return (
-    <nav className="fixed bottom-0 w-full bg-lime-950">
-      <ul className="mx-auto flex h-20 max-w-sm items-center justify-around border-t bg-gray-50 text-gray-500 shadow-lg">
+    <nav className="fixed bottom-0 w-full bg-white">
+      <ul className="mx-auto flex h-20 max-w-sm items-center justify-around border-t text-gray-500 shadow-lg">
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (
