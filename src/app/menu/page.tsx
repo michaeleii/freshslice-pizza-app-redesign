@@ -2,7 +2,7 @@ import MainWrapper from "@/components/main-wrapper";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import { MenuItem, classicPizzas } from "./data";
+import { MenuItem, classicPizzas, feastPizzas, drinks, extras } from "./data";
 import {
   Drawer,
   DrawerContent,
@@ -27,7 +27,15 @@ export default function MenuPage() {
         <TabsContent value="classic-pizzas">
           <MenuList data={classicPizzas} />
         </TabsContent>
-        <TabsContent value="feast-pizzas"></TabsContent>
+        <TabsContent value="feast-pizzas">
+          <MenuList data={feastPizzas} />
+        </TabsContent>
+        <TabsContent value="drinks">
+          <MenuList data={drinks} />
+        </TabsContent>
+        <TabsContent value="extras">
+          <MenuList data={extras} />
+        </TabsContent>
       </Tabs>
     </MainWrapper>
   );
