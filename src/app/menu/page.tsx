@@ -12,11 +12,21 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function MenuPage() {
   return (
     <MainWrapper>
-      <MenuList data={classicPizzas} />
+      <Tabs defaultValue="classic-pizzas" className="w-full">
+        <TabsList className="h-fit max-w-md gap-2 overflow-y-auto bg-white">
+          <TabsTrigger value="classic-pizzas">Classic Pizzas</TabsTrigger>
+          <TabsTrigger value="feast-pizzas">Feast Pizzas</TabsTrigger>
+        </TabsList>
+        <TabsContent value="classic-pizzas">
+          <MenuList data={classicPizzas} />
+        </TabsContent>
+        <TabsContent value="feast-pizzas"></TabsContent>
+      </Tabs>
     </MainWrapper>
   );
 }
