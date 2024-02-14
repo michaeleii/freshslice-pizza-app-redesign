@@ -10,7 +10,7 @@ import { StaticImageData } from "next/image";
 
 export type MenuItem = {
   name: string;
-  ingredients: string;
+  ingredients?: string;
   image: StaticImageData;
 };
 
