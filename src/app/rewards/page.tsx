@@ -52,14 +52,14 @@ export default function Rewards() {
       </div>
       <div className=" flex flex-col gap-2">
         <Button
-          className="flex w-full items-center gap-2 bg-green-600"
+          className="flex w-full items-center gap-2 bg-green-700"
           size="lg"
         >
           <GiftIcon />
           <span>Purchase Gift Card</span>
         </Button>
         <Button
-          className="flex w-full items-center gap-2 bg-green-600"
+          className="flex w-full items-center gap-2 bg-green-700"
           size="lg"
         >
           <PiggyBankIcon />
