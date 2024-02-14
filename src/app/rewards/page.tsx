@@ -53,7 +53,7 @@ export default function Rewards() {
           </div>
           <div className="mt-4 text-center text-xl uppercase ">Cash Back</div>
           <div className="mt-4 text-center text-sm text-gray-500">
-            on every purchase
+            on every purchases
           </div>
         </div>
         <div className=" flex flex-col gap-2">
