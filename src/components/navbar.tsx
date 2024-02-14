@@ -20,7 +20,7 @@ export default function NavBar() {
   const pathname = usePathname();
   return (
     <nav className="fixed bottom-0 w-full bg-white">
-      <ul className="mx-auto flex h-20 max-w-sm items-center justify-around border-t text-gray-500 shadow-lg">
+      <ul className="mx-auto flex h-20 max-w-md items-center justify-around border-t text-gray-500 shadow-lg">
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (

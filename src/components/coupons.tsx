@@ -1,5 +1,6 @@
 import FreshSliceLogo from "@/../public/freshslice-logo.webp";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Coupons() {
   return (
@@ -29,20 +30,22 @@ function Coupon({
   description: string;
 }) {
   return (
-    <div className="flex rounded-md border-2 border-l-[15px] border-green-700 p-5">
-      <div className="flex flex-col justify-center gap-2">
-        <h3 className="mb-4 text-lg font-medium text-green-700">{title}</h3>
-        <p className="text-xs text-gray-500">{description}</p>
+    <Link href="/menu">
+      <div className="flex cursor-pointer justify-between rounded-md border-2 border-l-[15px] border-green-700 p-5">
+        <div className="flex max-w-[200px] flex-col justify-center gap-2">
+          <h3 className="mb-4 text-lg font-medium text-green-700">{title}</h3>
+          <p className="text-sm text-gray-500">{description}</p>
+        </div>
+        <div>
+          <Image
+            src={FreshSliceLogo}
+            alt="Freshslice Pizza"
+            className="aspect-square"
+            width={100}
+            height={100}
+          />
+        </div>
       </div>
-      <div className="my-auto">
-        <Image
-          src={FreshSliceLogo}
-          alt="Freshslice Pizza"
-          className="aspect-square"
-          width={100}
-          height={100}
-        />
-      </div>
-    </div>
+    </Link>
   );
 }

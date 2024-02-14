@@ -195,7 +195,7 @@ function DrawerLink({
           <ArrowRightIcon />
         </div>
       </DrawerTrigger>
-      <DrawerContent className="mx-auto max-w-sm">{children}</DrawerContent>
+      <DrawerContent className="mx-auto max-w-md">{children}</DrawerContent>
     </Drawer>
   );
 }

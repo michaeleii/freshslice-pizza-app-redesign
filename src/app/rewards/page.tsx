@@ -9,7 +9,7 @@ import Coupons from "@/components/coupons";
 export default function Rewards() {
   return (
     <>
-      <h1 className="mx-auto w-full max-w-sm bg-black py-2 text-center text-white">
+      <h1 className="mx-auto mb-4 w-full max-w-md bg-black py-2 text-center text-white">
         Rewards
       </h1>
       <MainWrapper>
