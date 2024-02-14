@@ -18,9 +18,11 @@ export default function MenuPage() {
   return (
     <MainWrapper>
       <Tabs defaultValue="classic-pizzas" className="w-full">
-        <TabsList className="h-fit max-w-md gap-2 overflow-y-auto bg-white">
+        <TabsList className="sticky top-0 mb-2 h-fit w-full max-w-md gap-2 overflow-y-auto rounded-none border-b bg-white pb-2">
           <TabsTrigger value="classic-pizzas">Classic Pizzas</TabsTrigger>
           <TabsTrigger value="feast-pizzas">Feast Pizzas</TabsTrigger>
+          <TabsTrigger value="extras">Extras</TabsTrigger>
+          <TabsTrigger value="drinks">Drinks</TabsTrigger>
         </TabsList>
         <TabsContent value="classic-pizzas">
           <MenuList data={classicPizzas} />

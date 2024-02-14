@@ -1,10 +1,11 @@
-import CheeseWhiteSauce from "@/../public/menu/cheese_white_sauce.jpeg";
-import CheeseTomatoSauce from "@/../public/menu/cheese_tomato_sauce.jpeg";
-import Pepperoini from "@/../public/menu/pepperoni.jpeg";
-import Hawaiian from "@/../public/menu/hawaiian.jpeg";
-import Beef from "@/../public/menu/beef.jpeg";
-import BaconMushroom from "@/../public/menu/bacon_mushroom.jpeg";
-import Veggie from "@/../public/menu/veggie.jpeg";
+import CheeseWhiteSauce from "@/../public/menu/classic/cheese_white_sauce.jpeg";
+import CheeseTomatoSauce from "@/../public/menu/classic/cheese_tomato_sauce.jpeg";
+import Pepperoini from "@/../public/menu/classic/pepperoni.jpeg";
+import Hawaiian from "@/../public/menu/classic/hawaiian.jpeg";
+import Beef from "@/../public/menu/classic/beef.jpeg";
+import BaconMushroom from "@/../public/menu/classic/bacon_mushroom.jpeg";
+import Veggie from "@/../public/menu/classic/veggie.jpeg";
+
 import { StaticImageData } from "next/image";
 
 export type MenuItem = {
