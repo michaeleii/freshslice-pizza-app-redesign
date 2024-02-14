@@ -153,3 +153,22 @@ export const drinks: MenuItem[] = [
     image: Crush,
   },
 ];
+
+import CheesyBread from "@/../public/menu/extras/cheesy_bread.jpeg";
+import ChickenWings from "@/../public/menu/extras/chicken_wings.jpeg";
+import Brownie from "@/../public/menu/extras/brownie.jpeg";
+
+export const extras: MenuItem[] = [
+  {
+    name: "Cheesy Bread",
+    image: CheesyBread,
+  },
+  {
+    name: "Chicken Wings",
+    image: ChickenWings,
+  },
+  {
+    name: "Brownie",
+    image: Brownie,
+  },
+];
