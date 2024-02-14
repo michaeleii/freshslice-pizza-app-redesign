@@ -12,6 +12,7 @@ export default function Home() {
       <Link href="/menu">
         <Image
           src={PromoBanner}
+          placeholder="blur"
           alt="Freshslice Pizza"
           className="mx-auto w-full max-w-md object-cover shadow-md"
         />

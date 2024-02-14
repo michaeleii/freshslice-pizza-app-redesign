@@ -13,10 +13,28 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ShoppingCartIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function MenuPage() {
   return (
     <MainWrapper>
+      <div className="my-4">
+        <h1 className="my-2">You currently ordering from:</h1>
+        <div className="flex items-center gap-2">
+          <div className="flex items-baseline gap-2">
+            <p className="text-sm font-semibold text-gray-500">
+              Freshslice Pizza (Joyce St)
+            </p>
+            <Link
+              href="/store"
+              className="text-xs text-blue-500 hover:text-blue-700 hover:underline"
+            >
+              Change Location
+            </Link>
+          </div>
+        </div>
+      </div>
       <Tabs defaultValue="classic-pizzas" className="w-full">
         <TabsList className="sticky top-0 mb-2 h-fit w-full max-w-md gap-2 overflow-y-auto rounded-none border-b bg-white pb-2">
           <TabsTrigger value="classic-pizzas">Classic Pizzas</TabsTrigger>
@@ -55,16 +73,21 @@ function MenuItemCard({ menuItem }: { menuItem: MenuItem }) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <div className="cursor-pointer rounded-lg rounded-b-lg border shadow-md">
+        <div className="flex cursor-pointer gap-4 rounded-lg rounded-b-lg border shadow-md">
           <Image
             src={menuItem.image}
             alt={menuItem.name}
-            className="rounded-t-lg"
+            placeholder="blur"
+            className="w-44 rounded-l-lg"
           />
-          <div className="p-5">
-            <h2 className="text-lg font-semibold">{menuItem.name}</h2>
-            <p className="my-4 text-sm text-gray-500">{menuItem.ingredients}</p>
-            <p className="text-right text-xl">$2.00</p>
+          <div className="flex h-full w-full flex-col p-2">
+            <h2 className="text-md font-semibold">{menuItem.name}</h2>
+            <p className="text-xs text-gray-500">{menuItem.ingredients}</p>
+            <div className="mt-auto">
+              <p className="text-md mt-6 text-right font-semibold text-gray-700">
+                $2.00
+              </p>
+            </div>
           </div>
         </div>
       </DrawerTrigger>
@@ -83,7 +106,10 @@ function MenuItemCard({ menuItem }: { menuItem: MenuItem }) {
           </DrawerDescription>
         </DrawerHeader>
         <DrawerFooter>
-          <Button className="bg-green-700">Add To Cart</Button>
+          <Button className="flex items-center gap-2 bg-green-700">
+            <ShoppingCartIcon className="h-4 w-4" />
+            <span>Add To Cart</span>
+          </Button>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
